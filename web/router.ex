@@ -17,13 +17,14 @@ defmodule AmbulanteandoApi.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
-  end
+  end 
 
   # Other scopes may use custom stacks.
   scope "/api/v1", AmbulanteandoApi do
     pipe_through :api
 
     post "/tracks", TrackController, :create 
+    post "/spots", SpotController, :create
 
   end
 end
