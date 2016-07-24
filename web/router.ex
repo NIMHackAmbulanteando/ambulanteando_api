@@ -23,6 +23,7 @@ defmodule AmbulanteandoApi.Router do
   scope "/api/v1", AmbulanteandoApi do
     pipe_through :api
 
+    get "/tracks", TrackController, :show
     post "/tracks", TrackController, :create 
 
   end
