@@ -20,7 +20,10 @@ defmodule AmbulanteandoApi.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", AmbulanteandoApi do
-  #   pipe_through :api
-  # end
+  scope "/api/v1", AmbulanteandoApi do
+    pipe_through :api
+
+    post "/tracks", TrackController, :create 
+
+  end
 end
